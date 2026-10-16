@@ -724,22 +724,32 @@ button:hover {
   width: 100%;
   padding: 10px 12px;
   border-radius: 6px;
+  border: 1px solid rgba(117, 21, 255, 0.32);
   background: rgba(17, 17, 17, 0.8);
   color: var(--muted);
+  cursor: pointer;
   line-height: 1.5;
   text-decoration: none;
   transition:
     color 0.2s ease,
     background 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .about__social-list a:hover,
 .about__social-list a:focus-visible {
   transform: translateY(-2px);
-  background: rgba(117, 21, 255, 0.14);
+  border-color: rgba(117, 21, 255, 0.8);
+  background: rgba(117, 21, 255, 0.2);
   color: var(--text);
-  outline: none;
+  box-shadow: 0 8px 20px rgba(117, 21, 255, 0.16);
+}
+
+.about__social-list a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
 }
 
 .about__closing {
